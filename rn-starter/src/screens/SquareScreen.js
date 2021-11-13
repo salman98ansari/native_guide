@@ -16,6 +16,18 @@ const SquareScreen = () => {
       case "red":
         red + change > 255 || red + change < 0 ? null : setRed(red + change);
         return;
+      case "green":
+        green + change > 255 || green + change < 0
+          ? null
+          : setGreen(green + change);
+        return;
+      case "blue":
+        blue + change > 255 || blue + change < 0
+          ? null
+          : setBlue(blue + change);
+        return;
+      default:
+        return;
     }
 
     // if (color === "red") {
@@ -36,14 +48,14 @@ const SquareScreen = () => {
       />
       <ColorCounter
         color="Blue"
-        onInscrease={() => setBlue(blue + COLOR_INC)}
-        onDescrease={() => setBlue(blue - COLOR_INC)}
+        onInscrease={() => setColor("blue", COLOR_INC)}
+        onDescrease={() => setColor("blue", -1 * COLOR_INC)}
       />
 
       <ColorCounter
         color="Green"
-        onInscrease={() => setGreen(green + COLOR_INC)}
-        onDescrease={() => setGreen(green - COLOR_INC)}
+        onInscrease={() => setColor("green", COLOR_INC)}
+        onDescrease={() => setColor("green", -1 * COLOR_INC)}
       />
       <View
         style={{
