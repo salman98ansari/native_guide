@@ -2,7 +2,6 @@ import React from "react";
 import { Text, StyleSheet, View, Button, TouchableOpacity } from "react-native";
 
 const HomeScreen = (props) => {
-  console.log(props);
   return (
     <View>
       <Text style={{ textAlign: "center" }}>Hey There !</Text>
@@ -40,6 +39,16 @@ const HomeScreen = (props) => {
           }}
         >
           <Text>Counter Screen</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={{ justifyContent: "center", alignItems: "center" }}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => {
+            props.navigation.navigate("Color");
+          }}
+        >
+          <Text>Color Screen</Text>
         </TouchableOpacity>
       </View>
     </View>
