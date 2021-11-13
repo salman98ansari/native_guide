@@ -51,6 +51,16 @@ const HomeScreen = (props) => {
           <Text>Color Screen</Text>
         </TouchableOpacity>
       </View>
+      <View style={{ justifyContent: "center", alignItems: "center" }}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => {
+            props.navigation.navigate("Square");
+          }}
+        >
+          <Text>Square Screen</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
